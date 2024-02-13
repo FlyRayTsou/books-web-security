@@ -26,6 +26,11 @@ http://example.com/path/to/resource
 - OWASP(Open Web Application Security Project)
   - https://owasp.org/
 
+# 1.5
+
+- 質問：論理的な隔離とは
+- 質問：プロセスレベルの隔離
+
 # Dictionary
 - Web(World Wide Web)
 - CERN(欧州原子核研究機構)
