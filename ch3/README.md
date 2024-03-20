@@ -88,10 +88,24 @@ https://gribble.org/papers/UW-CSE-07-12-01.pdf
 
 ## Process-per-Browsing-Instance モデル
 「1つのレンダラプロセスは同一 Browsing Instance に属するウィンドウやフレームの処理しかしてはいけない」
+Chromium
 
 ## Process-per-Site-Instance モデル
+「1つのレンダラプロセスは同一 Site Instance に属するウィンドウやフレームの処理しかしてはいけない」
 
 ## Process-per-Site モデル
+「1 つのレンダラプロセスは同一 Schemeful Site を持ったウィンドウやフレームの処理しかしてはいけない」
+
+# 3.3 Process-per-Browsing-Instance モデルに対する攻撃
+
+# 3.3.1
+## opener
+if window A opens window B, B.opener returns A.
+https://developer.mozilla.org/en-US/docs/Web/API/Window/opener
+
+# 3.3.2 memory disclosure attacker
+
+https://sylph.fuis.u-fukui.ac.jp/~moris/lecture/ARC/2020/ISA.pdf
 
 # 日本語
 
