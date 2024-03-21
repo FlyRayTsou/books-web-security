@@ -92,6 +92,7 @@ Chromium
 
 ## Process-per-Site-Instance モデル
 「1つのレンダラプロセスは同一 Site Instance に属するウィンドウやフレームの処理しかしてはいけない」
+Chrome
 
 ## Process-per-Site モデル
 「1 つのレンダラプロセスは同一 Schemeful Site を持ったウィンドウやフレームの処理しかしてはいけない」
@@ -105,8 +106,15 @@ https://developer.mozilla.org/en-US/docs/Web/API/Window/opener
 
 # 3.3.2 memory disclosure attacker
 
-https://sylph.fuis.u-fukui.ac.jp/~moris/lecture/ARC/2020/ISA.pdf
+- ISA
+  - https://sylph.fuis.u-fukui.ac.jp/~moris/lecture/ARC/2020/ISA.pdf
 
+- サイドチャネル攻撃
+  - https://ja.wikipedia.org/wiki/%E3%82%B5%E3%82%A4%E3%83%89%E3%83%81%E3%83%A3%E3%83%8D%E3%83%AB%E6%94%BB%E6%92%83
+
+- Flush+Reload
+  - https://www.usenix.org/conference/usenixsecurity14/technical-sessions/presentation/yarom
+  - https://milestone-of-se.nesuke.com/sv-advanced/sv-security/cache-side-channel/
 # 日本語
 
 備える（そなえる）
