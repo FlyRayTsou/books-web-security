@@ -127,7 +127,7 @@ https://gribble.org/papers/UW-CSE-07-12-01.pdf
 # 3.4
 
 # 3.4.1 CORB(Cross-Origin Read Blocking)
-- 対象JSON、HTML、XML
+- 対象JSON、HTML、XML、「<iframe>、 <object>、<embed> のようなタグ以外から発生するリクエスト」
 
 - nosniff: この属性を付与するとファイルの内容をContent-Type属性から判断してねとお願いできる。
   - https://qiita.com/kohekohe1221/items/f87a9308b606172b5f15
