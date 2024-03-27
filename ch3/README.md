@@ -87,39 +87,62 @@ https://gribble.org/papers/UW-CSE-07-12-01.pdf
 
 
 ## Process-per-Browsing-Instance モデル
-「1つのレンダラプロセスは同一 Browsing Instance に属するウィンドウやフレームの処理しかしてはいけない」
-Chromium
+- 「1つのレンダラプロセスは同一 Browsing Instance に属するウィンドウやフレームの処理しかしてはいけない」
+- Chromium
 
 ## Process-per-Site-Instance モデル
-「1つのレンダラプロセスは同一 Site Instance に属するウィンドウやフレームの処理しかしてはいけない」
-Chrome
+- 「1つのレンダラプロセスは同一 Site Instance に属するウィンドウやフレームの処理しかしてはいけない」
+- Chrome
 
 ## Process-per-Site モデル
-「1 つのレンダラプロセスは同一 Schemeful Site を持ったウィンドウやフレームの処理しかしてはいけない」
+- 「1 つのレンダラプロセスは同一 Schemeful Site を持ったウィンドウやフレームの処理しかしてはいけない」
 
 # 3.3 Process-per-Browsing-Instance モデルに対する攻撃
 
 # 3.3.1
 ## opener
-if window A opens window B, B.opener returns A.
-https://developer.mozilla.org/en-US/docs/Web/API/Window/opener
+- if window A opens window B, B.opener returns A.
+- https://developer.mozilla.org/en-US/docs/Web/API/Window/opener
 
 # 3.3.2 memory disclosure attacker
 
 - ISA
   - https://sylph.fuis.u-fukui.ac.jp/~moris/lecture/ARC/2020/ISA.pdf
 
-- サイドチャネル攻撃
+- サイドチャネル攻撃(side-channel attack)
+  - サイドチャネル攻撃とは、コンピュータセキュリティの分野において、アルゴリズムの実装自体の弱さ（例：暗号そのものに対する解読やソフトウェアのバグ）ではなく、コンピュータシステムの実装から得られる情報を元にした暗号解読の攻撃のことである。タイミング情報、電力消費、電磁放射線のリーク、ときには音声さえも、追加の情報源となって悪用される可能性がある。
   - https://ja.wikipedia.org/wiki/%E3%82%B5%E3%82%A4%E3%83%89%E3%83%81%E3%83%A3%E3%83%8D%E3%83%AB%E6%94%BB%E6%92%83
 
 - Flush+Reload
-  - https://www.usenix.org/conference/usenixsecurity14/technical-sessions/presentation/yarom
   - https://milestone-of-se.nesuke.com/sv-advanced/sv-security/cache-side-channel/
+  - https://www.usenix.org/conference/usenixsecurity14/technical-sessions/presentation/yarom
+
+- Transient Execution Attack
+  - y = array2[array1[x] * C];
+    - x = (z - array1) / S
+    - array1[x] * C = *(array1 + x * S) * C
+    - *(array1 + (z - array1) / S * S) * C = (*z) * C
+  - array2[array1[x] * C] = array2 + K * C *(*z)
+
+# 3.4
+
+# 3.4.1 CORB(Cross-Origin Read Blocking)
+- 対象JSON、HTML、XML
+
+- nosniff: この属性を付与するとファイルの内容をContent-Type属性から判断してねとお願いできる。
+  - https://qiita.com/kohekohe1221/items/f87a9308b606172b5f15
+
+
+# 3.4.2 CORP(Cross-Origin Resource Policy)
+
+
 # 日本語
 
 備える（そなえる）
 モノリシック（monolithic）
+すなわち(in other words)
 
 # 略語
 - CTF（Capture The Flag）
 - PSL(Public Suffix List)
+- MIME(Multipurpose Internet Mail Extensions)
