@@ -131,10 +131,19 @@ https://gribble.org/papers/UW-CSE-07-12-01.pdf
 
 - nosniff: この属性を付与するとファイルの内容をContent-Type属性から判断してねとお願いできる。
   - https://qiita.com/kohekohe1221/items/f87a9308b606172b5f15
-
+- 206 Partial Content
+  - https://developer.mozilla.org/ja/docs/Web/HTTP/Status/206
+- MIME Sniffing 
+  - https://techblog.gmo-ap.jp/2022/12/09/mime_sniffing/
 
 # 3.4.2 CORP(Cross-Origin Resource Policy)
-
+- CORB により JSON、HTML、XML は保護されますが、それ以外のリソースは守れ
+ません。
+- Fetch Standard
+  - https://fetch.spec.whatwg.org/
+- オプトイン式
+- same-site, same-origin, cross-origin
+  - https://zenn.dev/agektmr/articles/f8dcd345a88c97
 
 # 日本語
 
